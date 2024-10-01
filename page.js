@@ -34,6 +34,7 @@ module.exports = {
     paymenMethodModal: '.payment-picker.open .modal',
     addCardModal: '.modal.unusual',
     popUpCarSearchModal: '.order-body',
+    soundProofModal: 'div=Soundproof curtain',
     
     // Functions
     fillAddresses: async function(from, to) {

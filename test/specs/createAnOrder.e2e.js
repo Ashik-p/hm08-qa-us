@@ -15,6 +15,7 @@ describe('Create an order', () => {
         await browser.url(`/`)
         await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
         await page.selectSupportive();
+        await expect($(page.soundProofModal)).toBeDisplayed();
 
     })
 
@@ -33,8 +34,6 @@ describe('Create an order', () => {
         const cardIcon = await $(page.cardIcon);
         await cardIcon.waitForDisplayed();
         await expect (await $(cardIcon)).toBeExisting();
-
-        await browser.pause(2000);
     })
 
     it('should write a message for driver', async () => {
@@ -53,9 +52,6 @@ describe('Create an order', () => {
 
         await page.orderBlanketAndHandkerchiefs();
         await expect ($('.switch-input')).toBeChecked();
-
-        await browser.pause(5000);
-
  
     })
 
